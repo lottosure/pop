@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>열기구 사이언스 레이서 - Hot Air Balloon Science Racer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="gameCanvas"></canvas>
+
+    <div id="hud">
+        <div>🎯 남은 거리: <span id="distance">100%</span></div>
+        <div>🌡️ 온도: <span id="currentTemp">50</span>°C</div>
+        <div>⚡ 속도: <span id="speed">5</span> m/s</div>
+    </div>
+
+    <div id="temperatureControl">
+        <div id="temperatureLabel">🔥 버너 온도</div>
+        <input type="range" id="temperatureSlider" min="0" max="100" value="50" orient="vertical">
+        <div id="temperatureValue">50°C</div>
+    </div>
+
+    <div id="gameMessage"></div>
+    <button id="restartButton">다시 시작</button>
+
+    <div id="instructions">
+        ⬆️⬇️ 화살표 키 또는 슬라이더로 온도 조절 | 장애물 20개를 피하면 승리!
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
